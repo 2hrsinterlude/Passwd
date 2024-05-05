@@ -1,0 +1,49 @@
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.button:hover .button-label {
+    color: #0B61B8;
+}
+
+.button.inactive .button-label,
+.button.inactive rect {
+    color: #8DC6FF;
+    fill: #8DC6FF;
+}
+
+.button:hover rect {
+    fill: #0B61B8;
+}
+
+.button.inactive:hover .button-label,
+.button.inactive:hover rect {
+    color: #45a7fd;
+    fill: #45a7fd;
+}
+
+/*--------------------------Input---------------------------*/
+
+button {
+    input {
+        background-color: transparent;
+        width: 38px;
+        font-size: 16px;
+        color: #1A8CFF;
+        font-weight: 700;
+        text-align: center;
+        border: none;
+        outline: none;
+    }
+
+    input::placeholder {
+        color: #8DC6FF;
+        font-weight: 700;
+    }
+}

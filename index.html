@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #grid {
+        position: absolute;
+        top: 10px;
+        font-size: 11px;
+        border: 1px solid #00000026;
+        background-color: transparent;
+        border-radius: 24px;
+        height: 18px;
+        padding: 0 9px;
+        color: #00000026;
+        font-weight: 600;
+    }
+
+    .color-grid {
+        .main {
+            background-color: aquamarine;
+        }
+
+        .message {
+            background-color: beige;
+        }
+
+        .password {
+            background-color: blueviolet;
+        }
+
+        .nav {
+            background-color: #6e9f41;
+        }
+
+        .container {
+            background-color: aliceblue;
+        }
+    }
+</style>
+<body>
+
+<button id="grid">grid</button>
+
+<div class="container">
+    <main class="main">
+        <div class="message">
+            Your password
+        </div>
+        <div class="password">
+
+        </div>
+<!--        <div class="password">-->
+<!--            HYND9drnWXL10LrQ4Xf4u48kgNKm9Gco9zJph9wzh3Tdj24zATPhBnqqf6Q3CZwxNXZrCjnJxp7MjbpaZPcwKy9nphAGJ6QEQpGt-->
+<!--            mc_Pnj1zn)Uu%7%r7Vq:aC@s>U%BA^v#qi]3VmiJXge*]enVjE}hYRJiB*EM48sqE8b~fZE,pD5d1EZsA>cg9kA-~j^~8%5x%^Wm-->
+<!--        </div>-->
+    </main>
+    <nav class="nav">
+        <button class="button">
+<!--            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                <rect width="24" height="24" rx="12" fill="#1A8CFF"/>-->
+<!--                <path d="M6 12C6 13.1867 6.35189 14.3467 7.01118 15.3334C7.67047 16.3201 8.60754 17.0892 9.7039 17.5433C10.8003 17.9974 12.0067 18.1162 13.1705 17.8847C14.3344 17.6532 15.4035 17.0818 16.2426 16.2426C17.0818 15.4035 17.6532 14.3344 17.8847 13.1705C18.1162 12.0067 17.9974 10.8003 17.5433 9.7039C17.0892 8.60754 16.3201 7.67047 15.3334 7.01118C14.3467 6.35189 13.1867 6 12 6C10.3226 6.00631 8.71265 6.66082 7.50667 7.82667L6 9.33333M6 9.33333V6M6 9.33333H9.33333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--            </svg>-->
+            <input class="input" inputmode="numeric" maxlength="3" placeholder="24" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+            <span class="button-label">Length</span>
+        </button>
+        <button class="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="12" fill="#1A8CFF"/>
+                <path d="M6 12C6 13.1867 6.35189 14.3467 7.01118 15.3334C7.67047 16.3201 8.60754 17.0892 9.7039 17.5433C10.8003 17.9974 12.0067 18.1162 13.1705 17.8847C14.3344 17.6532 15.4035 17.0818 16.2426 16.2426C17.0818 15.4035 17.6532 14.3344 17.8847 13.1705C18.1162 12.0067 17.9974 10.8003 17.5433 9.7039C17.0892 8.60754 16.3201 7.67047 15.3334 7.01118C14.3467 6.35189 13.1867 6 12 6C10.3226 6.00631 8.71265 6.66082 7.50667 7.82667L6 9.33333M6 9.33333V6M6 9.33333H9.33333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="button-label">Regenerate</span>
+        </button>
+        <button id="toggleNumbers" class="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="12" fill="#1A8CFF"/>
+                <path d="M17.3332 8L9.99984 15.3333L6.6665 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="button-label">Numbers</span>
+        </button>
+        <button id="toggleSymbols" class="button inactive">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="12" fill="#1A8CFF"/>
+                <path d="M17.3332 8L9.99984 15.3333L6.6665 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="button-label">Symbols</span>
+        </button>
+    </nav>
+</div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
