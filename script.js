@@ -1,8 +1,8 @@
 // import {foo} from "/src/js/GeneratePassword.js";
 // console.log(foo);
-import { SetOptions, options } from "/src/js/SetOptions.js";
+import { SetOptions, options } from "/src/js/SetOptions";
 import { generatePasswordKey, STRING_ALPHABET, STRING_NUMBERS, STRING_NUMBERS_SYMBOLS } from "/src/js/GeneratePassword.js";
-import { GenerateByOptions } from "/src/js/GenerateByOptions.js";
+import { GenerateByOptions } from "/src/js/GenerateByOptions";
 
 const options_button = document.querySelectorAll('.button:nth-last-child(-n+2)')
 const generate_button = document.querySelector('.button:nth-child(2)')
