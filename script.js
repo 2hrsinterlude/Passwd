@@ -1,39 +1,32 @@
-import { SetOptions, options } from "./src/js/SetOptions.js";
-import { GenerateByOptions } from "./src/js/GenerateByOptions.js";
+import { options, toggleOption } from "./src/js/toggleOption.js";
+import { PasswordGenerator } from "./src/js/PasswordGenerator.js";
 
-const options_button = document.querySelectorAll('.button:nth-last-child(-n+2)')
-const generate_button = document.querySelector('.button:nth-child(2)')
-const main = document.querySelector('.password');
-const length_input = document.querySelector('.input');
+const optionButtons = document.querySelectorAll(".button:nth-last-child(-n+2)");
+const generateButton = document.querySelector(".button:nth-child(2)");
+const passwordDisplay = document.querySelector(".password");
+const lengthInput = document.querySelector(".input");
 
-window.onload = function() {
-    localStorage.removeItem('inputValue');
-}
+optionButtons.forEach((element) => {
+    toggleOption(element);
+});
 
-console.log(length_input)
+passwordDisplay.innerHTML = new PasswordGenerator(options).generatePassword(
+    lengthInput.value
+);
 
+optionButtons.forEach((button) => {
+    button.addEventListener("click", (element) => {
+        element.currentTarget.classList.toggle("inactive");
+        toggleOption(element.currentTarget);
+    });
+});
 
-options_button.forEach(element => {
-    SetOptions(element)
-})
+generateButton.addEventListener("click", () => {
+    passwordDisplay.innerHTML = new PasswordGenerator(options).generatePassword(
+        lengthInput.value
+    );
+});
 
-GenerateByOptions(main)
-
-options_button.forEach((button) => {
-    button.addEventListener('click', (element) => {
-        element.currentTarget.classList.toggle('inactive');
-        SetOptions(element.currentTarget)
-
-    })
-})
-
-generate_button.addEventListener('click', () => {
-    GenerateByOptions(main, length_input.value)
-    console.log(length_input.value)
-    console.log(length_input.placeholder)
-})
-
-document.getElementById('grid').addEventListener('click', () => {
-    console.log(document.querySelector('body'))
-    document.querySelector('body').classList.toggle('color-grid')
-})
+document.getElementById("grid").addEventListener("click", () => {
+    document.querySelector("body").classList.toggle("color-grid");
+});
